@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV Anbefaling</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <main class="container">
+        <div class="user-select-parent">
+            <select id="userSelect" class="user-select">
+                <option value="1">Didrik</option>
+                <option value="2">Olai</option>
+                <option value="3">Håvard</option>
+            </select>
+        </div>
+
+        <header>
+            <h1>TV rangering og anbefaling</h1>
+        </header>
+
+        <section class="series-section">
+            <h2>Serier</h2>
+            <input type="text" id="series-search" placeholder="Søk etter en serie" autocomplete="off"">
+            <button id="series-search-btn">Søk</button>
+            <div id="series-list" class="series-list"></div>
+
+
+        </section>
+    </main>
+</body>
+</html>

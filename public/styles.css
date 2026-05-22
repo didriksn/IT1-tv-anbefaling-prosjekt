@@ -1,0 +1,123 @@
+.series-list {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.user-select-parent {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.user-select {
+    padding: 8px;
+    font-size: 16px;
+}
+
+.show {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+.popup-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 20px;
+    min-width: min(760px, 100%);
+}
+
+.popup-overlay {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 1000;
+}
+
+.popup-overlay.open {
+    display: flex;
+}
+
+.popup-card {
+    position: relative;
+    width: min(760px, 100%);
+    border-radius: 12px;
+    background: #ffffff;
+    padding: 24px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    border: 0;
+    background: transparent;
+    font-size: 32px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.popup-grid h2 {
+    grid-column: 1;
+    grid-row: 1;
+    margin: 0;
+}
+
+.popup-summary {
+    grid-column: 1;
+    grid-row: 2;
+    align-self: start;
+}
+
+.popup-comment-input {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: start;
+    margin-top: 20px;
+}
+
+.popup-comments {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: start;
+    min-height: 400px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fafafa;
+}
+
+.popup-comment-input input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (max-width: 700px) {
+    .popup-card {
+        width: min(100%, 760px);
+    }
+
+    .popup-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .popup-grid h2,
+    .popup-summary,
+    .popup-comment-input,
+    .popup-comments {
+        grid-column: 1;
+        grid-row: auto;
+    }
+}
