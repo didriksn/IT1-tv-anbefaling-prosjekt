@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nb">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +11,7 @@
 <body>
     <main class="container">
         <div class="user-select-parent">
+            <label for="userSelect" class="visually-hidden">Velg bruker</label>
             <select id="userSelect" class="user-select">
                 <option value="1">Didrik</option>
                 <option value="2">Olai</option>
@@ -23,13 +24,22 @@
         </header>
 
         <section class="series-section">
-            <h2>Serier</h2>
-            <input type="text" id="series-search" placeholder="Søk etter en serie" autocomplete="off"">
-            <button id="series-search-btn">Søk</button>
+            <h2>Søk etter en TV-serie</h2>
+            <form id="series-search-form" class="search-form">
+                <label for="series-search" class="visually-hidden">Søk etter en serie</label>
+                <input type="text" id="series-search" placeholder="Søk etter en serie" autocomplete="off">
+                <button id="series-search-btn" type="submit">Søk</button>
+            </form>
             <div id="series-list" class="series-list"></div>
 
 
         </section>
+
+        <footer class="site-footer" aria-label="Attribution for TV data">
+            <p>TV data provided by TVmaze</p>
+            <p>Licensed under CC BY-SA 4.0</p>
+            <p><a href="https://www.tvmaze.com/" target="_blank" rel="noopener noreferrer">https://www.tvmaze.com/</a></p>
+        </footer>
     </main>
 </body>
 </html>
